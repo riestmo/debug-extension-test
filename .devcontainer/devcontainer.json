@@ -1,0 +1,30 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.134.0/containers/cpp
+{
+	"name": "Debug Extension Test",
+	"image": "ubuntu:20.04",
+
+	"customizations": {
+        "vscode": {
+        "settings": {
+            "remote.extensionKind": {
+            "arm.device-manager": ["ui"],
+            "arm.embedded-debug": ["ui"]
+            }
+        },
+        "extensions": [
+            "arm.device-manager",
+            "arm.embedded-debug"
+        ]
+        }
+    }
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "gcc -v",
+
+	// Comment out this line to run as root instead.
+	// "remoteUser": "vscode"
+}
